@@ -1,12 +1,12 @@
-public class main 
+public class Main
 {
-    public static void main (string [] args)
+    public static void main (String [] args)
     {
         IA IA_1 = new IA ();
         IA IA_2 = new IA ();
 
         Gato Gato = new Gato();
 
-        gato.Start(IA_1, IA_2); 
+        Gato.Start(IA_1, IA_2); 
     }
 }

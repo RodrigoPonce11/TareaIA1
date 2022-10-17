@@ -10,7 +10,7 @@ public class IA {
     	ia(t);
     }
 
-    private static void ia (int[][] t){       
+    public static void ia (int[][] t){ //Esta función deberia de cambiar de nombre a algo como "Jugar" 
     	int ju = 5, nj = 0, cona = 0, conb = 0, ia = 1;      // cona = cantidad de 1   conb = cantidad de 2
     	
         for (int i = 0; i<t.length ; i++){

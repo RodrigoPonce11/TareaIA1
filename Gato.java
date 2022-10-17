@@ -20,8 +20,8 @@ public class Gato
 
         //Inicio del Juego. Se iran pasando el mismo tablero e iran tomando las desiciones en base a eso.
         //While NINGUNO HA GANADO || NO SE HA CONCRETADO UN EMPATE
-        IA_1(Tablero);
-        IA_2(Tablero);
+        IA_1.ia(Tablero); //Para que esto funcione correctamente se debe quitar el STATIC de la funcion actualmente llamada "ia"
+        IA_2.ia(Tablero);
         //END WHILE
     }
 }
