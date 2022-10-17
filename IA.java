@@ -1,6 +1,6 @@
 
 public class IA {
-    public static void main (String[]args){
+    /*public static void main (String[]args){
     	int[][] t = new int [3][3];
         for (int i = 0; i<t.length ; i++){
             for (int j = 0; j<t.length ; j++){
@@ -8,9 +8,14 @@ public class IA {
             }
         }
     	ia(t);
-    }
+    }*/
 
-    public static void ia (int[][] t){ //Esta función deberia de cambiar de nombre a algo como "Jugar" 
+	public IA ()
+	{
+
+	}
+
+    public void jugar (int[][] t){
     	int ju = 5, nj = 0, cona = 0, conb = 0, ia = 1;      // cona = cantidad de 1   conb = cantidad de 2
     	
         for (int i = 0; i<t.length ; i++){

@@ -6,22 +6,29 @@ public class Gato
         
     }
 
-    public void Start (IA IA_1, IA IA_2)
+    public void start (IA ia1, IA ia2)
     {
         //Generación de Tablero.
-        int[][] Tablero = new int [3][3];
-        for (int i = 0; i<Tablero.length ; i++)
+        int[][] tablero = new int [3][3];
+        for (int i = 0; i<tablero.length ; i++)
         {
-            for (int j = 0; j<Tablero.length ; j++)
+            for (int j = 0; j<tablero.length ; j++)
             {
-            	Tablero[i][j] = 0;
+            	tablero[i][j] = 0;
             }
         }
 
         //Inicio del Juego. Se iran pasando el mismo tablero e iran tomando las desiciones en base a eso.
-        //While NINGUNO HA GANADO || NO SE HA CONCRETADO UN EMPATE
-        IA_1.ia(Tablero); //Para que esto funcione correctamente se debe quitar el STATIC de la funcion actualmente llamada "ia"
-        IA_2.ia(Tablero);
-        //END WHILE
+        while(juegoTerminado (tablero) == false)
+        {
+            ia1.jugar(tablero);
+            ia2.jugar(tablero);
+        }
+    }
+
+    public boolean juegoTerminado (int [][] tablero)
+    {
+        //Ir revisando el Tablero para ver si se ha completado el Juego.
+        return false;
     }
 }
