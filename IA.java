@@ -37,36 +37,36 @@ public class IA {
         if(nj > 0) {
         	ju = d(t, ia);
         }
-        
-        switch (ju){ 
-        
+
+        switch (ju){
+
         	case 1 :    t[0][0] = ia;
         				break;
-        		
+
         	case 2 :	t[0][1] = ia;
 						break;
-        		
+
         	case 3 :	t[0][2] = ia;
 						break;
-        		
+
         	case 4 :	t[1][0] = ia;
 						break;
-        	
+
         	case 5 :	t[1][1] = ia;
 						break;
-        		
+
         	case 6 :	t[1][2] = ia;
 						break;
-        		
+
         	case 7 :	t[2][0] = ia;
 						break;
-        		
+
         	case 8 :	t[2][1] = ia;
 						break;
-        		
-        	case 9 :    t[2][1] = ia;
+
+        	case 9 :    t[2][2] = ia;
 						break;
-        		
+
         }
         
 
