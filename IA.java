@@ -380,10 +380,239 @@ public class IA {
 					}
 
 				}else{                                         // ia tiene el centro
+					int x = 0, y = 0, cont =0;                          // se buscaran las posiciones de las 2 jugadas del rival
+					for(int i = 0; i < t.length; i++){
+						for(int j = 0; j < t.length; j++){
+							cont++;
+							if(t[i][j] == 1){
+								if( x == 0){               // x < y
+									x = cont;
+								}else{
+									y = cont;
+								}
+							}
+						}
+					}
+					// se analizaran caso a caso las posibles posiciones del rival
 
-						//terminar
+					if(x == 1 && y == 2){    // primero las 12 posibilidades en las que hay que bloquear
+						d = 3;
+					}
+					if(x == 2 && y == 3){
+						d = 1;
+					}
+					if(x == 3 && y == 6){
+						d = 9;
+					}
+					if(x == 6 && y == 9){
+						d = 3;
+					}
+					if(x == 8 && y == 9){
+						d = 7;
+					}
+					if(x == 7 && y == 8){
+						d = 9;
+					}
+					if(x == 4 && y == 7){
+						d = 1;
+					}
+					if(x == 1 && y == 4){
+						d = 7;
+					}
+					if(x == 1 && y == 3){
+						d = 2;
+					}
+					if(x == 1 && y == 7){
+						d = 4;
+					}
+					if(x == 3 && y == 9){
+						d = 6;
+					}
+					if(x == 7 && y == 9){
+						d = 8;
+					}
+					//se bloquean las 14 posibilidades de que el rival asegure su victoria
+					if(x == 1 && y == 9 || x == 3 && y == 7){
+						e = (int) (Math.random() * 4) + 1;
+						switch (e){
+							case 1:
+								d= 2;
+								break;
+							case 2:
+								d= 4;
+								break;
+							case 3:
+								d= 6;
+								break;
+							case 4:
+								d= 8;
+								break;
+						}
+					}
+					if(x == 1 && y == 8){
+						e = (int) (Math.random() * 2) + 1;
+						switch (e){
+							case 1:
+								d= 4;
+								break;
+							case 2:
+								d= 7;
+								break;
+
+						}
+					}
+					if(x == 1 && y == 6){
+						e = (int) (Math.random() * 2) + 1;
+						switch (e){
+							case 1:
+								d= 2;
+								break;
+							case 2:
+								d= 3;
+								break;
+
+						}
+					}
+					if(x == 3 && y == 4){
+						e = (int) (Math.random() * 2) + 1;
+						switch (e){
+							case 1:
+								d= 1;
+								break;
+							case 2:
+								d= 2;
+								break;
+
+						}
+					}
+					if(x == 3 && y == 8){
+						e = (int) (Math.random() * 2) + 1;
+						switch (e){
+							case 1:
+								d= 6;
+								break;
+							case 2:
+								d= 9;
+								break;
+
+						}
+					}
+					if(x == 2 && y == 9){
+						e = (int) (Math.random() * 2) + 1;
+						switch (e){
+							case 1:
+								d= 3;
+								break;
+							case 2:
+								d= 6;
+								break;
+
+						}
+					}
+					if(x == 4 && y == 9){
+						e = (int) (Math.random() * 2) + 1;
+						switch (e){
+							case 1:
+								d= 7;
+								break;
+							case 2:
+								d= 8;
+								break;
+
+						}
+					}
+					if(x == 2 && y == 7){
+						e = (int) (Math.random() * 2) + 1;
+						switch (e){
+							case 1:
+								d= 1;
+								break;
+							case 2:
+								d= 4;
+								break;
+
+						}
+					}
+					if(x == 6 && y == 7){
+						e = (int) (Math.random() * 2) + 1;
+						switch (e){
+							case 1:
+								d= 8;
+								break;
+							case 2:
+								d= 9;
+								break;
+
+						}
+					}
+					if(x == 2 && y == 4 || x == 2 && y == 6){
+						e = (int) (Math.random() * 3) + 1;
+						switch (e){
+							case 1:
+								d= 1;
+								break;
+							case 2:
+								d= 3;
+								break;
+							case 3:
+								d= 7;
+								if(y == 6){
+									d = 9;
+								}
+								break;
+
+						}
+					}
+					if(x == 4 && y == 8 || x == 6 && y == 8){
+						e = (int) (Math.random() * 3) + 1;
+						switch (e){
+							case 1:
+								d= 1;
+								if(x == 6){
+									d= 3;
+								}
+								break;
+							case 2:
+								d= 7;
+								break;
+							case 3:
+								d= 9;
+								break;
+
+						}
+					}
+					//ultimas 2 posibilidades considera que el rival jugo en el centro opuesto a su primera jugada
+					if(x == 2 && y == 8 || x == 4 && y == 6){
+						e = (int) (Math.random() * 6) + 1;
+						switch (e){
+							case 1:
+								d= 1;
+								break;
+							case 2:
+								d= 2;
+								if(x == 2){
+									d= 4;
+								}
+								break;
+							case 3:
+								d= 3;
+								break;
+							case 4:
+								d= 7;
+								break;
+							case 5:
+								d= 8;
+								if(x == 2){
+									d= 6;
+								}
+								break;
+							case 6:
+								d= 9;
+								break;
+						}
+					}
+
 				}
-
 				break;
 
 			case 4:                                            //ia = 1
