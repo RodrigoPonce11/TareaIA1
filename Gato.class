@@ -1,0 +1,12 @@
+public class Gato
+{
+    public Gato ()
+    {
+        //Mover aqui la generación del Tablero.
+    }
+
+    public void Start (IA IA_1, IA IA_2)
+    {
+        
+    }
+}

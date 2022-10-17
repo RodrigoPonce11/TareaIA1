@@ -1,0 +1,12 @@
+public class main 
+{
+    public static void main (string [] args)
+    {
+        IA IA_1 = new IA ();
+        IA IA_2 = new IA ();
+
+        Gato Gato = new Gato();
+
+        gato.Start(IA_1, IA_2); 
+    }
+}
