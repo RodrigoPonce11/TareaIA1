@@ -4,3 +4,15 @@ Ejecutar Main.java
 
 IMPORTANTE: Por ahora juega contra el Jugador para probar el correcto funcionamiento de la lógica MiniMax, pero luego al hacer el espejo de la función
 			"MejorMovimientoClaroQueSi" se ha de poder implementar IA vs IA.
+
+			Al iniciar preguntaran por un numero del 0 al 8, siendo el Tablero:
+			0 1 2
+			3 4 5
+			6 7 8
+
+			Luego, al colocar un Numero, se graficara el Tablero con la X como lo que hemos indicado y, rapidamente, la respuesta
+			de la IA con la O.
+
+			Esto se repite nuevamente, pidiendonos nuevamente una Posición.
+
+			Esto solo es por ahora, pues pronto sera IA vs IA.
