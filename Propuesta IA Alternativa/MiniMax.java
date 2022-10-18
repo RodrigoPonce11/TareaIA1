@@ -66,16 +66,16 @@ public class MiniMax
     //Para IA vs IA, implementar Encontrar Mejor Movimiento para IA 2, la cual buscara el Min.
     public static <Move> Move EncontrarElMejorMovimientoClaroQueSiIAAlter (Tablero <Move> Tablero, int ProfundiadMaxima)
     {
-        double MejorValor = Double.POSITIVE_INFINITY; //EL mejor movimiento del Adversario, oh no.
+        double MejorValor = Double.NEGATIVE_INFINITY; //EL mejor movimiento del Adversario, oh no.
 
         Move MejorMovimiento = null; //Aun no tengo un Mejor Movimiento.
 
         for (Move Movimiento : Tablero.getLegalMoves()) //Itera Hipoteticos movimientos.
         {
             //Ejecuta MiniMax con el Oponente, por eso ES el Max.
-            double Resultado = MinMax (Tablero.Movimiento(Movimiento), true, Tablero.ObtenerTurno(), ProfundiadMaxima);
+            double Resultado = MinMax (Tablero.Movimiento(Movimiento), false, Tablero.ObtenerTurno(), ProfundiadMaxima);
 
-            if (Resultado < MejorValor) //Oh, he encontrado el mejor Resultado. 
+            if (Resultado > MejorValor) //Oh, he encontrado el mejor Resultado. 
             {                           //El Mejor Movimiento es el que, entre todos, dio el mejor resultado en esto.
                 MejorValor = Resultado;
                 MejorMovimiento = Movimiento;

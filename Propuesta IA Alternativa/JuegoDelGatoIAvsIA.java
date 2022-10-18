@@ -12,7 +12,7 @@ public class JuegoDelGatoIAvsIA
         while (true)
         {
             //Movimiento de la IA1.
-            Integer MovimientoDeLaIA1 = MiniMax.EncontrarElMejorMovimientoClaroQueSiIAAlter (Tablero, 9);
+            Integer MovimientoDeLaIA1 = MiniMax.EncontrarElMejorMovimientoClaroQueSi (Tablero, 9);
             Tablero = (GatoTablero) Tablero.Movimiento(MovimientoDeLaIA1);
 
             System.out.println (Tablero);
