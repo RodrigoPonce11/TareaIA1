@@ -1,11 +1,11 @@
 import java.util.*;
 
-public class JuegoDelGato 
+public class JuegoDelGatoIAvsUsuario
 {
     private Scanner Teclado = new Scanner (System.in);
     private GatoTablero Tablero = new GatoTablero();
     
-    public JuegoDelGato ()
+    public JuegoDelGatoIAvsUsuario ()
     {
 
     }
