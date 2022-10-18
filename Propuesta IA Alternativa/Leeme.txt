@@ -1,0 +1,6 @@
+Dirigir el Compilador hacia el directorio de la Carpeta "Propuesta IA Alternativa"
+
+Ejecutar Main.java
+
+IMPORTANTE: Por ahora juega contra el Jugador para probar el correcto funcionamiento de la lógica MiniMax, pero luego al hacer el espejo de la función
+			"MejorMovimientoClaroQueSi" se ha de poder implementar IA vs IA.
