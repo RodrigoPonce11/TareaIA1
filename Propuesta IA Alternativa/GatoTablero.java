@@ -3,7 +3,7 @@ import java.util.*;
 public class GatoTablero implements Tablero <Integer>
 {
     private static final int NumeroCasillas = 9; //Constante definida de numero de Casillas.
-
+    
     private GatoMarca[] Posicion;
 
     private GatoMarca Turno;
@@ -75,7 +75,7 @@ public class GatoTablero implements Tablero <Integer>
     @Override
     public double Evaluar (Marca Jugador) //Evalua desde el punto de vista de la IA si es Ganadora, Perdedora o Empate.
     {
-        if (HaGanado() && Turno == Jugador) //Si hay Victoria presente y el Turno corresponde al Jugador Humano u otra IA.
+        if (HaGanado() && Turno == Jugador) //Si hay Victoria presente y el Turno corresponde al Oponente.
         {
             return -1;
         }

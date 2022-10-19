@@ -50,7 +50,7 @@ public class MiniMax
 
         for (Move Movimiento : Tablero.getLegalMoves()) //Itera Hipoteticos movimientos.
         {
-            //Ejecuta MiniMax con el Oponente, por eso NO es el Max.
+            //Ejecuta MiniMax fingiendo ser el Oponente, por eso NO es el Max.
             double Resultado = MinMax (Tablero.Movimiento(Movimiento), false, Tablero.ObtenerTurno(), ProfundiadMaxima);
 
             if (Resultado > MejorValor) //Oh, he encontrado el mejor Resultado. 

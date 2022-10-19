@@ -19,7 +19,7 @@ public class JuegoDelGatoIAvsIA
 
             if (Tablero.HaGanado())
             {
-                System.out.println ("IA 1 ha ganado.");
+                System.out.println ("IA1 ha ganado.");
                 break;
             }
             else if (Tablero.EsEmpate())

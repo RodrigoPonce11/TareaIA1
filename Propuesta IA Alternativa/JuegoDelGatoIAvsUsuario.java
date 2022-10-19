@@ -12,9 +12,9 @@ public class JuegoDelGatoIAvsUsuario
 
     public Integer ObtenerMovimientoDelJugador ()
     {
-        Integer Movimiento = -1;
+        Integer Movimiento = -1; //Oponente representa perdida para la IA, por eso es -1.
 
-        while (!Tablero.getLegalMoves().contains(Movimiento)) //Mientras hayan Movimientos Legales, se ha de seguir ejecutando.
+        while (!Tablero.getLegalMoves().contains(Movimiento)) //Mientras el Movimiento que puse NO es Permitido.
         {
             System.out.print ("Ingrese el Numero de Casilla del 0 al 8 donde desea colocar su Marca: ");
             Movimiento = Teclado.nextInt();
@@ -29,7 +29,7 @@ public class JuegoDelGatoIAvsUsuario
         {
             //Movimiento del Jugador.
             Integer MovimientoDelJugador = ObtenerMovimientoDelJugador();
-            Tablero = (GatoTablero) Tablero.Movimiento(MovimientoDelJugador);
+            Tablero = (GatoTablero) Tablero.Movimiento(MovimientoDelJugador); //Pasar el Movimiento del Jugador al Tablero.
 
             System.out.println (Tablero);
 
@@ -43,6 +43,7 @@ public class JuegoDelGatoIAvsUsuario
                 System.out.println ("Empate.");
                 break;
             }
+            
             //Movimiento de la IA.
             Integer MovimientoDeLaIA = MiniMax.EncontrarElMejorMovimientoClaroQueSi (Tablero, 9);
             Tablero = (GatoTablero) Tablero.Movimiento(MovimientoDeLaIA);
