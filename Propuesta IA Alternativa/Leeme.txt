@@ -10,7 +10,7 @@ IMPORTANTE: Hay 2 Modos: IA contra Usuario e IA contra si misma.
 				3 4 5
 				6 7 8
 
-				Luego, al colocar un Numero, se graficara el Tablero con la X como lo que hemos indicado y, rapidamente, la respuesta
+				Luego, al colocar un numero, se graficara el Tablero con la X como lo que hemos indicado y, rapidamente, la respuesta
 				de la IA con la O.
 
 				Esto se repite nuevamente, pidiendonos nuevamente una Posición.
