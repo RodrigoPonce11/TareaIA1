@@ -7,7 +7,7 @@ public class Main
         //Gato.JugarGato();
 
         //TEST III [Desarrollo | No experimental, aun] - IA VS IA
-        JuegoDelGatoIAvsIA Gato2 = new JuegoDelGatoIAvsIA ();
-        Gato2.JugarGato();
+        //JuegoDelGatoIAvsIA Gato2 = new JuegoDelGatoIAvsIA ();
+        //Gato2.JugarGato();
     }
 }

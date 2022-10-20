@@ -23,7 +23,7 @@ public enum GatoMarca implements Marca //Es un Enum para implementar las Categor
         {
             case X: //Si el jugador tiene el valor X el siguiente turno toma el valor O.
                 return O;
-            case O: //Si el jugador tiene el valor O el siguiente turno toma el valor V.
+            case O: //Si el jugador tiene el valor O el siguiente turno toma el valor X.
                 return X;
             default:
                 return V;
