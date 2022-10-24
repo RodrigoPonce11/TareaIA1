@@ -44,7 +44,7 @@ public class MiniMax
 
     public static <Move> Move EncontrarElMejorMovimientoClaroQueSi (Tablero <Move> Tablero, int ProfundiadMaxima)
     {
-        double MejorValor = Double.NEGATIVE_INFINITY; //EL mejor movimiento del Adversario, oh no.
+        double MejorValor = Double.NEGATIVE_INFINITY; //No puede haber un valor mas bajo que este.
 
         Move MejorMovimiento = null; //Aun no tengo un Mejor Movimiento.
 
@@ -53,7 +53,7 @@ public class MiniMax
             //Ejecuta MiniMax fingiendo ser el Oponente, por eso NO es el Max.
             double Resultado = MinMax (Tablero.Movimiento(Movimiento), false, Tablero.ObtenerTurno(), ProfundiadMaxima);
 
-            if (Resultado > MejorValor) //Oh, he encontrado el mejor Resultado. 
+            if (Resultado > MejorValor) //El Mejor Resultado.
             {                           //El Mejor Movimiento es el que, entre todos, dio el mejor resultado en esto.
                 MejorValor = Resultado;
                 MejorMovimiento = Movimiento;
