@@ -14,7 +14,7 @@ public class MiniMax
         {
             double v = Double.NEGATIVE_INFINITY; //Es la mejor de las Evaluaciones para Maximizar.
 
-            for (Move Movimiento : Tablero.getLegalMoves())
+            for (Move Movimiento : Tablero.MovimientosPermitidos())
             {
                 //Evaluo a partir del Siguiente Movimiento Hipotetico, todo esto es "Predecir", Anticiparse. Tomo el Lugar del Otro.
                 //De manera Hipotetica, asi que ahora soy el Minimizador, por eso el segundo parametro es False.
@@ -29,7 +29,7 @@ public class MiniMax
         {
             double v = Double.POSITIVE_INFINITY; //Es la mejor de las Evaluaciones para Minimizar.
 
-            for (Move Movimiento : Tablero.getLegalMoves())
+            for (Move Movimiento : Tablero.MovimientosPermitidos())
             {
                 //Evaluo a partir del Siguiente Movimiento Hipotetico, todo esto es "Predecir", Anticiparse. Tomo el Lugar del Otro.
                 //De manera Hipotetica, asi que ahora soy el Max, por eso el segundo parametro es ahora; True.
@@ -48,7 +48,7 @@ public class MiniMax
 
         Move MejorMovimiento = null; //Aun no tengo un Mejor Movimiento.
 
-        for (Move Movimiento : Tablero.getLegalMoves()) //Itera Hipoteticos movimientos.
+        for (Move Movimiento : Tablero.MovimientosPermitidos()) //Itera Hipoteticos movimientos.
         {
             //Ejecuta MiniMax fingiendo ser el Oponente, por eso NO es el Max.
             double Resultado = MinMax (Tablero.Movimiento(Movimiento), false, Tablero.ObtenerTurno(), ProfundiadMaxima);

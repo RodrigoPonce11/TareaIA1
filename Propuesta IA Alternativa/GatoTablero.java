@@ -40,7 +40,7 @@ public class GatoTablero implements Tablero <Integer>
     }
 
     @Override
-    public List <Integer> getLegalMoves () //Movimientos Legales en el Tablero
+    public List <Integer> MovimientosPermitidos () //Movimientos Legales en el Tablero
     {
         var MovimientosLegales = new ArrayList<Integer>();
         //Todas aquellas Casillas aun Vacias son Legales.

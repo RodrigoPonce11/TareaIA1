@@ -14,7 +14,7 @@ public class JuegoDelGatoIAvsUsuario
     {
         Integer Movimiento = -1; //Oponente representa perdida para la IA, por eso es -1.
 
-        while (!Tablero.getLegalMoves().contains(Movimiento)) //Mientras el Movimiento que puse NO es Permitido.
+        while (!Tablero.MovimientosPermitidos().contains(Movimiento)) //Mientras el Movimiento que puse NO es Permitido.
         {
             System.out.print ("Ingrese el Numero de Casilla del 0 al 8 donde desea colocar su Marca: ");
             Movimiento = Teclado.nextInt();
