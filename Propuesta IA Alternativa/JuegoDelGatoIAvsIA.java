@@ -15,6 +15,7 @@ public class JuegoDelGatoIAvsIA
             Integer MovimientoDeLaIA1 = MiniMax.EncontrarElMejorMovimientoClaroQueSi (Tablero, 9);
             Tablero = (GatoTablero) Tablero.Movimiento(MovimientoDeLaIA1);
 
+            System.out.println("Movimiento de la IA1:");
             System.out.println (Tablero);
 
             if (Tablero.HaGanado())
@@ -31,6 +32,7 @@ public class JuegoDelGatoIAvsIA
             Integer MovimientoDeLaIA2 = MiniMax.EncontrarElMejorMovimientoClaroQueSi (Tablero, 9);
             Tablero = (GatoTablero) Tablero.Movimiento(MovimientoDeLaIA2);
 
+            System.out.println("Movimiento de la IA2:");
             System.out.println (Tablero);
 
             if (Tablero.HaGanado())

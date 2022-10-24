@@ -7,8 +7,8 @@ public class Main
         //Gato.JugarGato();
 
         //TEST III [Desarrollo | No experimental, aun] - IA VS IA
-        //JuegoDelGatoIAvsIA Gato2 = new JuegoDelGatoIAvsIA ();
-        //Gato2.JugarGato();
+        JuegoDelGatoIAvsIA Gato2 = new JuegoDelGatoIAvsIA ();
+        Gato2.JugarGato();
 
 
         /*Por que cuando es Agente vs Agente debe jugar siempre con la funcion que Maximiza y no Max vs Min? 
